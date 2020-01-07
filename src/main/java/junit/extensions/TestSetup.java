@@ -30,13 +30,13 @@ public class TestSetup extends TestDecorator {
     /**
      * Sets up the fixture. Override to set up additional fixture state.
      */
-    protected void setUp() throws Exception {
+    protected void setUp() throws setupException {
     }
 
     /**
      * Tears down the fixture. Override to tear down the additional fixture
      * state.
      */
-    protected void tearDown() throws Exception {
+    protected void tearDown() throws tearDownException {
     }
 }
