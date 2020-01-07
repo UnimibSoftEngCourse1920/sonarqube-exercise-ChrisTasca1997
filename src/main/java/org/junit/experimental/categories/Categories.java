@@ -223,7 +223,6 @@ public class Categories extends Suite {
             if (childCategories.isEmpty()) {
                 return included.isEmpty();
             }
-
             if (!excluded.isEmpty()) {
                 if (excludedAny) {
                     if (matchesAnyParentCategories(childCategories, excluded)) {
@@ -235,6 +234,11 @@ public class Categories extends Suite {
                     }
                 }
             }
+            return hasCorrectCategory(description);
+        }
+        
+         private boolean hasCorrectCategory(Description description) {
+             final Set<Class<?>> childCategories= categories(description);
 
             if (included.isEmpty()) {
                 // Couldn't be excluded, and with no suite's included categories treated as should run.
