@@ -165,7 +165,6 @@ public abstract class BaseTestRunner implements TestListener {
                 } else {
                     System.out.println("Missing Test class name");
                 }
-                i++;
             } else {
                 suiteName = args[i];
             }
